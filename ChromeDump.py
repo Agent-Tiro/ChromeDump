@@ -1,6 +1,8 @@
 import re
 from urllib.parse import unquote
 
+### Apologies for what is about to pass as regex! But hey it seems to work
+
 pw = re.compile(r'"password":"(.*?),', re.IGNORECASE)
 email = re.compile(r'"email":"(.*?),', re.IGNORECASE)
 pwd = re.compile(r'(?<=passwd=)(.*?)(?=&)', re.IGNORECASE)
@@ -29,6 +31,7 @@ with open ('dump.txt', 'rt') as dump:
         elif signinname.search(line) != None:
             creds.append(signinname.search(line).group())
 
+# Funky one liner to remove duplicates from a list
 creds = list(dict.fromkeys(creds))
 
 for i in creds:
