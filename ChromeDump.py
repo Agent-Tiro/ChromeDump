@@ -77,22 +77,22 @@ genpw = list(dict.fromkeys(genpw))
 genuser = list(dict.fromkeys(genuser))
 
 print("\n=================\n\
-        Office365 Stuff\n\
-       =================\n") 
+Office365 Stuff\n\
+=================\n") 
 for i in o365creds:
     print("Raw string: " + i)  
     print("URL Decoded String: " + unquote(i))
 
 print ("\n=================\n\
-         General Passwords\n\
-         ==================\n")
+General Passwords\n\
+==================\n")
 for i in genpw:
     print("Raw String: " + i)
     print("URL Decoded String: " + unquote(i))
 
 print("\n=================\n\
-        General Usernames\n\
-        ===================\n")
+General Usernames\n\
+===================\n")
 for i in genuser:
     print("Raw String: " + i)
     print("URL Decoded String: " + unquote(i))
